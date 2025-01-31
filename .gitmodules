@@ -1,0 +1,4 @@
+[submodule "themes/elegant"]
+	path = themes/elegant
+	url = https://github.com/IwanIDev/elegant.git
+	branch = 9c5d844
