@@ -39,7 +39,18 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build site
         run: pelican content
-
+      - name: Set up Docker
+        uses: docker/setup-docker-action@v4
+        with:
+          daemon-config: |
+            {
+              "debug": true,
+              "features": {
+                "containerd-snapshotter": true
+              }
+            }
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
       - name: Log in to the Container registry
         uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
         with:
@@ -61,6 +72,7 @@ jobs:
         with:
           context: .
           push: true
+          platforms: linux/amd64, linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
       
