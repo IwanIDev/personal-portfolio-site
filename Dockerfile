@@ -1,2 +1,2 @@
-FROM nginx:alpine
-COPY output/ /usr/share/nginx/html
+FROM lipanski/docker-static-website:latest
+COPY output/ .
