@@ -2,3 +2,6 @@
 	path = themes/elegant
 	url = https://github.com/IwanIDev/elegant.git
 	branch = 9c5d844
+[submodule "themes/PelicanTheme"]
+	path = themes/PelicanTheme
+	url = https://github.com/IwanIDev/PelicanTheme

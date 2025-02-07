@@ -8,7 +8,7 @@ TIMEZONE = 'Europe/London'
 
 DEFAULT_LANG = 'en'
 
-THEME="themes/elegant"
+THEME="themes/PelicanTheme"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
