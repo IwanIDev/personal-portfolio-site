@@ -1,0 +1,2 @@
+# PelicanTheme
+Personal Pelican Theme

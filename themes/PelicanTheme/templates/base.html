@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}" class="dark">
+	<head>
+		    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+		    <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/tailwind.purged.min.css"/>
+
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+			<title>{% block title %}{{ SITENAME|striptags|e }}{% endblock title %}</title>
+	</head>
+
+	<body>
+		<div class="flex flex-col h-screen bg-sky-950 text-white">
+			{% include '_includes/navbar.html' %}
+			<main class="flex-grow justify-center w-full  ">
+				<div class="p-4 flex-1 max-w-screen-xl max-h-screen-xl items-center justify-between mx-auto">
+					{% block content  %}
+
+					{% endblock %}
+				</div>
+			</main>
+			{% include '_includes/footer.html' %}
+		</div>
+	</body>
+
+</html>
