@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ article.title|striptags }} - {{ super() }}
+{% endblock %}
+
+{% block content %}
+    <article class="flex flex-col">
+        <header>
+            <h1 class="font-semibold text-4xl tracking-tight py-4">
+                <span class="block">
+                    {{ article.title }}
+                </span>
+            </h1>
+            <span class="text-sm text-gray-400">
+                {{ article.date|strftime('%a %d %b %Y') }}
+            </span>
+        </header>
+
+        {{ article.content }}
+
+        <footer class="flex flew-row">
+            <span class="text-sm text-gray-400 flex-auto">
+                {% if article.category %}
+                    Category: <a href="{{ SITEURL }}/category/{{ article.category }}">{{ article.category }}</a>
+                {% endif %}
+            </span>
+            <address class="flex-auto">
+                {% for author in article.authors %}
+                    <a href="{{ SITEURL }}/{{ author.url }}">
+                        {{ author }}
+                        {% if not loop.last %}
+                            ,
+                        {% endif %}
+                    </a>
+                {% endfor %}
+            </address>
+            <p class="flex-auto">Last modified {{ article.locale_modified }}</p>
+        </footer>
+    </article>
+{% endblock %}

@@ -201,9 +201,6 @@
   .row-start-4 {
     grid-row-start: 4;
   }
-  .mx-1 {
-    margin-inline: calc(var(--spacing) * 1);
-  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -236,6 +233,9 @@
   }
   .flex-1 {
     flex: 1;
+  }
+  .flex-auto {
+    flex: auto;
   }
   .flex-grow {
     flex-grow: 1;
