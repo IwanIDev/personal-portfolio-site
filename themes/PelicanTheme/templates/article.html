@@ -16,8 +16,10 @@
                 {{ article.date|strftime('%a %d %b %Y') }}
             </span>
         </header>
-
-        {{ article.content }}
+        
+        <div id="article-content">
+            {{ article.content }}
+        </div>
 
         <footer class="flex flew-row">
             <span class="text-sm text-gray-400 flex-auto">
