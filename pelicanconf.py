@@ -2,7 +2,7 @@ from datetime import datetime
 
 AUTHOR = 'Iwan Ingman'
 SITENAME = "Iwan's Portfolio"
-SITEURL = ""
+SITEURL = "https://www.iwaningman.com"
 
 NOW = datetime.now() # Gets the date and time when site is built
 
