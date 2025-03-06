@@ -2,7 +2,7 @@ from datetime import datetime
 
 AUTHOR = 'Iwan Ingman'
 SITENAME = "Iwan's Portfolio"
-SITEURL = "https://www.iwaningman.com"
+SITEURL = "http://localhost:8000"
 
 NOW = datetime.now() # Gets the date and time when site is built
 
@@ -38,4 +38,5 @@ SOCIAL = (
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-# RELATIVE_URLS = True
+RELATIVE_URLS = True
+

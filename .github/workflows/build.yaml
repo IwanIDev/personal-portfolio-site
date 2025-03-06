@@ -38,7 +38,7 @@ jobs:
       - name: Requirements build
         run: pip install -r requirements.txt
       - name: Build site
-        run: pelican content
+        run: pelican -s ./publishconf.py content
       - name: Set up Docker
         uses: docker/setup-docker-action@v4
         with:
