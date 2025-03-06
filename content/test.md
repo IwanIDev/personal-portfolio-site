@@ -4,7 +4,6 @@ date: 2025-01-29 13:30
 category: test
 ---
 
----
 __Advertisement :)__
 
 - __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image

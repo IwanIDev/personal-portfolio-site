@@ -28,6 +28,9 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+MD_INCLUDE_BASE_PATH = 'pages'
+SUMMARY_MAX_LENGTH = 25
+
 # Blogroll
 LINKS = (
     ("Pelican", "https://getpelican.com/"),
