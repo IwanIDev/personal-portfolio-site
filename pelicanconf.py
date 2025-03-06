@@ -1,5 +1,11 @@
 from datetime import datetime
-from .markdown import MARKDOWN
+
+import os
+import sys
+sys.path.append(os.curdir)
+
+from markdownconf import MARKDOWN
+
 
 AUTHOR = 'Iwan Ingman'
 SITENAME = "Iwan's Portfolio"

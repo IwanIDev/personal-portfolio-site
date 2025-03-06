@@ -3,11 +3,15 @@
 
 import os
 import sys
-from datetime import datetime
-from .markdown import MARKDOWN
-
 
 sys.path.append(os.curdir)
+
+from datetime import datetime
+from markdownconf import MARKDOWN
+
+MARKDOWN = MARKDOWN
+
+
 from pelicanconf import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
