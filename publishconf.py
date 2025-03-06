@@ -4,6 +4,7 @@
 import os
 import sys
 from datetime import datetime
+from .markdown import MARKDOWN
 
 
 sys.path.append(os.curdir)
