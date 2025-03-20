@@ -42,6 +42,16 @@ jobs:
         run: pip install -r requirements.txt
       - name: Build site
         run: pelican -s ./publishconf.py content
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '23'
+      - name: Install dependencies
+        working-directory: ./theme/PelicanTheme
+        run: npm install
+      - name: Build theme
+        working-directory: ./theme/PelicanTheme
+        run: npm run build
       - name: Set up Docker
         uses: docker/setup-docker-action@v4
         with:
