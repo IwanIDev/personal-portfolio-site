@@ -47,10 +47,10 @@ jobs:
         with:
           node-version: '23'
       - name: Install dependencies
-        working-directory: ./theme/PelicanTheme
+        working-directory: themes/PelicanTheme
         run: npm install
       - name: Build theme
-        working-directory: ./theme/PelicanTheme
+        working-directory: themes/PelicanTheme
         run: npm run build
       - name: Set up Docker
         uses: docker/setup-docker-action@v4
