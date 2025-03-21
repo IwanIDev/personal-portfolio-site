@@ -38,10 +38,6 @@ jobs:
         with:
           python-version: '3.13'
           cache: pip
-      - name: Requirements build
-        run: pip install -r requirements.txt
-      - name: Build site
-        run: pelican -s ./publishconf.py content
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -52,6 +48,10 @@ jobs:
       - name: Build theme
         working-directory: themes/PelicanTheme
         run: npm run build
+      - name: Requirements build
+        run: pip install -r requirements.txt
+      - name: Build site
+        run: pelican -s ./publishconf.py content
       - name: Set up Docker
         uses: docker/setup-docker-action@v4
         with:
