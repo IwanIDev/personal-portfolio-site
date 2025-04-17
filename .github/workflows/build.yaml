@@ -50,6 +50,8 @@ jobs:
         run: npm run build
       - name: Requirements build
         run: pip install -r requirements.txt
+      - name: Build Openring
+        run: ./openring.sh
       - name: Build site
         run: pelican -s ./publishconf.py content
       - name: Set up Docker

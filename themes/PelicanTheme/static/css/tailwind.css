@@ -6,6 +6,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
       "Liberation Mono", "Courier New", monospace;
+    --color-sky-700: oklch(0.5 0.134 242.749);
     --color-sky-950: oklch(0.293 0.066 243.157);
     --color-blue-500: oklch(0.623 0.214 259.815);
     --color-slate-400: oklch(0.704 0.04 256.788);
@@ -213,6 +214,9 @@
   .row-start-3 {
     grid-row-start: 3;
   }
+  .m-0\.5 {
+    margin: calc(var(--spacing) * 0.5);
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -313,6 +317,13 @@
   .gap-y-1 {
     row-gap: calc(var(--spacing) * 1);
   }
+  .space-x-2 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 2) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
   .space-x-3 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
@@ -352,6 +363,9 @@
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
+  }
+  .bg-sky-700\/50 {
+    background-color: color-mix(in oklab, var(--color-sky-700) 50%, transparent);
   }
   .bg-sky-950 {
     background-color: var(--color-sky-950);
@@ -408,6 +422,14 @@
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .text-sm {
     font-size: var(--text-sm);
