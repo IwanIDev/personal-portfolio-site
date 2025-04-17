@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}
-{{ article.title|striptags }} - {{ super() }}
-{% endblock %}
+{% block title %}{{ article.title|striptags }} - {{ super() }}{% endblock %}
 
 {% block content %}
     <article class="flex flex-col">
