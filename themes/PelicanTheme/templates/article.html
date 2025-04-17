@@ -12,33 +12,55 @@
                     {{ article.title }}
                 </span>
             </h1>
-            <span class="text-sm text-gray-400">
-                {{ article.date|strftime('%a %d %b %Y') }}
-            </span>
+            <section id="metadata" class="flex flex-col flex-wrap justify-items-start space-y-1">
+                <div class="flex flex-row flex-wrap">
+                    {% for tag in article.tags %}
+                        <a href="{{ SITEURL }}/tag/{{ tag }}" class="text-sm text-gray-400 hover:underline">
+                            {{ tag }}
+                        </a>
+                        {% if not loop.last %}
+                            ,
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="flex flex-row flex-wrap">
+                    {% if article.category %}
+                        <p class="text-sm text-gray-400">
+                            Category: 
+                            <a href="{{ SITEURL }}/category/{{ article.category }}" class="text-sm text-gray-400 hover:underline">
+                                {{ article.category }}
+                            </a>
+                        </p> 
+                    {% endif %}
+                </div>
+                <address class="flex flex-row flex-wrap">
+                    {% for author in article.authors %}
+                        <a class="text-sm text-gray-400 hover:underline" href="{{ SITEURL }}/{{ author.url }}">
+                            {{ author }}
+                            {% if not loop.last %}
+                                ,
+                            {% endif %}
+                        </a>
+                    {% endfor %}
+                </address>
+                <div class="flex flex-row flex-wrap">
+                    <p class="text-sm text-gray-400">
+                        Published {{ article.date|strftime('%a %d %b %Y') }}
+                    </p>
+                </div>
+                <div class="flex flex-row flex-wrap">
+                    <p class="text-sm text-gray-400">
+                        Last modified {{ article.modified|strftime('%a %d %b %Y') }}
+                    </p>
+                </div>
+            </section>
+            
         </header>
         
         <div class="article-content">
             <hr />
             {{ article.content }}
         </div>
-
-        <footer class="flex flew-row">
-            <span class="text-sm text-gray-400 flex-auto">
-                {% if article.category %}
-                    Category: <a href="{{ SITEURL }}/category/{{ article.category }}">{{ article.category }}</a>
-                {% endif %}
-            </span>
-            <address class="flex-auto">
-                {% for author in article.authors %}
-                    <a href="{{ SITEURL }}/{{ author.url }}">
-                        {{ author }}
-                        {% if not loop.last %}
-                            ,
-                        {% endif %}
-                    </a>
-                {% endfor %}
-            </address>
-            <p class="flex-auto">Last modified {{ article.locale_modified }}</p>
-        </footer>
+        
     </article>
 {% endblock %}

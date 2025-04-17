@@ -8,7 +8,7 @@ from markdownconf import MARKDOWN
 
 
 AUTHOR = 'Iwan Ingman'
-SITENAME = "Iwan's Portfolio"
+SITENAME = "Iwan Ingman"
 SITEURL = "http://localhost:8000"
 
 NOW = datetime.now() # Gets the date and time when site is built

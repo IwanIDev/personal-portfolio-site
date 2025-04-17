@@ -5,20 +5,16 @@ Home - {{ super() }}
 {% endblock %}
 
 {% block content %}
-    <h1 class="font-semibold text-4xl tracking-tight py-4">
-        <span class="block">
-            {{ SITENAME }}
-        </span>
-    </h1>
-
-    <div id="aboutme" class="flex flex-col">
-        
+    <section class="flex flex-col">
+        <h2 class="font-semibold text-3xl my-2">About Me</h2>
         <p class="font-normal text-xl">
             Hi! I'm Iwan, a student at <a class="text-blue-500 hover:underline" href="https://cardiff.ac.uk">Cardiff University</a> studying Computer Science.
         </p>
-
+        <p class="font-normal text-xl">
+            I am currently working on a few personal projects, including a blog and portfolio website.
+        </p>
         <hr class="h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 my-4" />
-    </div>
+    </section>
 
     <h2 class="font-semibold text-3xl">Recent Articles</h2>
 
