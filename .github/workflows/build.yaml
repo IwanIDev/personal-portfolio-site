@@ -45,13 +45,13 @@ jobs:
       - name: Install dependencies
         working-directory: themes/PelicanTheme
         run: npm install
+      - name: Build Openring
+        run: ./openring.sh
       - name: Build theme
         working-directory: themes/PelicanTheme
         run: npm run build
       - name: Requirements build
         run: pip install -r requirements.txt
-      - name: Build Openring
-        run: ./openring.sh
       - name: Build site
         run: pelican -s ./publishconf.py content
       - name: Set up Docker
