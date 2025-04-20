@@ -23,6 +23,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --breakpoint-xl: 80rem;
+    --container-sm: 24rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -204,18 +205,6 @@
   .relative {
     position: relative;
   }
-  .col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-  .row-start-1 {
-    grid-row-start: 1;
-  }
-  .row-start-2 {
-    grid-row-start: 2;
-  }
-  .row-start-3 {
-    grid-row-start: 3;
-  }
   .m-0\.5 {
     margin: calc(var(--spacing) * 0.5);
   }
@@ -243,9 +232,6 @@
   .flex {
     display: flex;
   }
-  .grid {
-    display: grid;
-  }
   .h-px {
     height: 1px;
   }
@@ -267,17 +253,14 @@
   .flex-grow {
     flex-grow: 1;
   }
+  .grow-0 {
+    flex-grow: 0;
+  }
+  .basis-sm {
+    flex-basis: var(--container-sm);
+  }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
-  }
-  .auto-cols-max {
-    grid-auto-columns: max-content;
-  }
-  .grid-flow-row {
-    grid-auto-flow: row;
-  }
-  .auto-rows-max {
-    grid-auto-rows: max-content;
   }
   .flex-col {
     flex-direction: column;
