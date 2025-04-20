@@ -5,9 +5,9 @@
             Recommended Articles from around the Web
         </p>
     </div>
-    <section class="grid grid-cols-3 gap-4">
+    <section class="flex flex-row flex-wrap gap-4">
       {{range .Articles}}
-      <div class="flex flex-col m-0.5 rounded-lg p-4 border-1 border-solid border-gray-700">
+      <div class="flex flex-auto flex-col m-0.5 rounded-lg p-4 border-1 border-solid border-gray-700">
         <h4 class="text-lg font-semibold" dir="auto">
           <a class="hover:underline" href="{{.Link}}" target="_blank" rel="noopener">{{.Title}}</a>
         </h4>
