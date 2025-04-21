@@ -173,3 +173,6 @@ cython_debug/
 output/
 
 node_modules/
+
+themes/PelicanTheme/static/css/tailwind.css
+themes/PelicanTheme/static/css/tailwind.purged.min.css
