@@ -23,6 +23,9 @@ CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 
 DELETE_OUTPUT_DIRECTORY = True
 
+MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
+YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
+
 THEME="themes/PelicanTheme"
 
 NOW = datetime.now()

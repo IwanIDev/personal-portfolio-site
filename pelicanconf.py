@@ -21,6 +21,8 @@ DEFAULT_LANG = 'en'
 
 THEME="themes/PelicanTheme"
 
+ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}.html'
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
