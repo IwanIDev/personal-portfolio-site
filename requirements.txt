@@ -15,6 +15,7 @@ ordered-set==4.1.0
 pelican==4.11.0
 pelican-markdown-include==1.0.5
 pelican-minify==2.0.0
+pelican-redirect==3.0.0
 pip==24.3.1
 py3dns==4.0.2
 pygments==2.18.0
