@@ -21,7 +21,10 @@ DEFAULT_LANG = 'en'
 
 THEME="themes/PelicanTheme"
 
+# Create each blog post in directories grouped by year and month
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{slug}.html'
+# Generate links to each blog post grouped by year and month but without the .html extension
+ARTICLE_URL = '{date:%Y}/{date:%m}/{slug}'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
