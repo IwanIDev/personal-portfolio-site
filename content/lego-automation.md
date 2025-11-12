@@ -7,4 +7,4 @@ Summary: Developing LEGO Arduino
 original_url: lego-train-hub-automation-with-ble.html
 ---
 
-*todo*.
+Please view [https://github.com/iwanidev/lego-arduino-train](https://github.com/iwanidev/lego-arduino-train) 
