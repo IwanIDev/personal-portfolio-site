@@ -12,32 +12,10 @@
                     {{ page.title }}
                 </span>
             </h1>
-            <span class="text-sm text-gray-400">
-                {{ page.date|strftime('%a %d %b %Y') }}
-            </span>
         </header>
 
         <div id="article-content">
             {{ page.content }}
         </div>
-
-        <footer class="flex flew-row">
-            <span class="text-sm text-gray-400 flex-auto">
-                {% if page.category %}
-                    Category: <a href="{{ SITEURL }}/category/{{ page.category }}">{{ page.category }}</a>
-                {% endif %}
-            </span>
-            <address class="flex-auto">
-                {% for author in page.authors %}
-                    <a href="{{ SITEURL }}/{{ author.url }}">
-                        {{ author }}
-                        {% if not loop.last %}
-                            ,
-                        {% endif %}
-                    </a>
-                {% endfor %}
-            </address>
-            <p class="flex-auto">Last modified {{ page.locale_modified }}</p>
-        </footer>
     </article>
 {% endblock %}
